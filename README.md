@@ -8,7 +8,7 @@ Jacob Swenson
 * [submission PR](https://github.com/DeltaVSwenson/lab-37/pull/1)
 * [travis]()
 * [back-end](http://xyz.com) (when applicable)
-* [front-end](http://xyz.com) (when applicable)
+* [front-end](https://priceless-banach-e9d125.netlify.com/) (when applicable)
 
 #### Documentation
 * [api docs]() (API servers)
