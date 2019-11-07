@@ -5,7 +5,7 @@ Redux reducers and Redux form
 ### Author: Student/Group Name
 Jacob Swenson
 ### Links and Resources
-* [submission PR](https://github.com/DeltaVSwenson/lab-29/pull/1)
+* [submission PR](https://github.com/DeltaVSwenson/lab-37/pull/1)
 * [travis]()
 * [back-end](http://xyz.com) (when applicable)
 * [front-end](http://xyz.com) (when applicable)
