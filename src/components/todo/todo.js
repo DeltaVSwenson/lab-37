@@ -6,8 +6,15 @@ import { connect } from 'react-redux';
 import { addItem, deleteItem, toggleComplete } from '../../store/toDoList/todo-reducer';
 import { toggleDetails } from '../../store/details/details-reducer';
 import { modifyItem, resetItem } from '../../store/items/items-reducer';
-
+import Form from 'react-jsonschema-form';
+import schema from '../../schema.json'
 import './todo.scss';
+
+const formUiSchema = {
+  _id: { 'ui:widget': 'hidden' },
+  __v: { 'ui:widget': 'hidden' },
+  complete: { 'ui:widget': 'hidden' },
+}
 
 function toDo(props) {
 
@@ -20,15 +27,12 @@ function toDo(props) {
   };
 
   let addNewItem = (e) => {
-
-    e.preventDefault();
-    e.target.reset();
-
-    const defaults = { _id: uuid(), complete:false };
-    const newItem = Object.assign({}, item, defaults);
+    const defaults = { _id: uuid() };
+    const newItem = Object.assign({}, e.formData, defaults);
 
     addItem(newItem);
-    //resetItem();
+
+
   };
 
   let showDetails = (id) => {
@@ -51,29 +55,11 @@ function toDo(props) {
 
         <div>
           <h3>Add Item</h3>
-          <form onSubmit={addNewItem}>
-            <label>
-              <span>To Do Item</span>
-              <input
-                name="text"
-                placeholder="Add To Do List Item"
-                onChange={handleInputChange}
-              />
-            </label>
-            <label>
-              <span>Difficulty Rating</span>
-              <input type="range" min="1" max="5" name="difficulty" defaultValue="3" onChange={handleInputChange} />
-            </label>
-            <label>
-              <span>Assigned To</span>
-              <input type="text" name="assignee" placeholder="Assigned To" onChange={handleInputChange} />
-            </label>
-            <label>
-              <span>Due</span>
-              <input type="date" name="due" onChange={handleInputChange} />
-            </label>
-            <button>Add Item</button>
-          </form>
+          <Form 
+            schema={schema}
+            uiSchema={formUiSchema}
+            onSubmit={addNewItem}
+          />
         </div>
 
         <div>
