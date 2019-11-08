@@ -1,11 +1,11 @@
-# LAB - 36 and 37
+# LAB - 36 and 37 now 38
 
 ## Project Name
-Redux reducers and Redux form
+Redux reducers and Redux form now for connected 
 ### Author: Student/Group Name
 Jacob Swenson
 ### Links and Resources
-* [submission PR](https://github.com/DeltaVSwenson/lab-37/pull/1)
+* [submission PR](https://github.com/DeltaVSwenson/lab-37/pull/3)
 * [travis]()
 * [back-end](http://xyz.com) (when applicable)
 * [front-end](https://priceless-banach-e9d125.netlify.com/) (when applicable)
